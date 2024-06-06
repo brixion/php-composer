@@ -8,6 +8,7 @@ RUN apt-get update \
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd \
+    && docker-php-ext-install soap \
     && docker-php-ext-install zip \
     && docker-php-ext-install pcntl \
     && docker-php-ext-install bcmath
