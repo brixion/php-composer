@@ -1,7 +1,7 @@
-FROM php:8.1.5-cli
+FROM php:8.3-cli
 
 RUN apt-get update \
-    && apt-get install -y git zip unzip zlib1g-dev libzip-dev libpng-dev libjpeg-dev libfreetype6-dev \
+    && apt-get install -y git zip unzip zlib1g-dev libzip-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
